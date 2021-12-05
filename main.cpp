@@ -19,8 +19,20 @@ struct connections
           the intersections.txt file
       the length of this section of road, in miles. */
 
+  string roadName;
+  string roadType;
+  int intersectionA;
+  int intersectionB;
+  double length;
 
-
+  connections(string rN, string rT, int iA, int iB, double l)
+  {
+    roadName = rN;
+    roadType = rT;
+    intersectionA = iA;
+    intersectionB = iB;
+    length = l;
+  }
 };
 struct intersections
 {   /*
@@ -39,10 +51,25 @@ struct intersections
   string placeState;
   string placeCity;
 
+  intersections(double lo, double la, double dfp, string pS, string pC)
+  {
+    longtitude = lo;
+    latitude = la;
+    distFromPlace = dfp;
+    placeState = pS;
+    placeCity = pC;
+  }
 };
-//read file connections
-//read file intersections
 
+
+//read file connections
+  /// one space between each data
+  /// US-2 T-- 281 274 10.301
+
+//read file intersections
+  /// -122.3135   47.2812    1.42 WA Lakeland South
+  /// -123.8130   46.9763    0.27 WA Aberdeen
+  
 
 
 int main() 
